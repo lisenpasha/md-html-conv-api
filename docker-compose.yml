@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  app:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "12345:12345"
+    volumes:
+      - /app/node_modules #store the node_modules folder inside the container but not share it with your local machine.
